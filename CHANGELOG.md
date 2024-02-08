@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v1.5
+----
+
+ * Fix excessive return type declaration in form constructor
+
 v1.4
 ----
 
