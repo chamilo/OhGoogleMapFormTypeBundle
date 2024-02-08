@@ -1,9 +1,9 @@
 {
-    "name": "krixer/google-map-form-type-bundle",
+    "name": "chamilo/google-map-form-type-bundle",
     "type": "symfony-bundle",
     "description": "Set latitude, longitude and address values on a form using Google Maps",
     "keywords": ["google maps", "symfony", "form"],
-    "homepage": "https://github.com/krixer/OhGoogleMapFormTypeBundle",
+    "homepage": "https://github.com/chamilo/OhGoogleMapFormTypeBundle",
     "license": "MIT",
     "authors": [
         {
