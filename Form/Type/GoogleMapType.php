@@ -17,14 +17,15 @@ class GoogleMapType extends AbstractType
 
     private $api_key;
 
-    public function __construct($api_key){
+    public function __construct($api_key): void
+    {
         $this->api_key = $api_key;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         // Default fields: latitude, longitude
         $builder
@@ -50,7 +51,7 @@ class GoogleMapType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'api_key'          => $this->api_key,
@@ -79,7 +80,7 @@ class GoogleMapType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildView(FormView $view, FormInterface $form, array $options)
+    public function buildView(FormView $view, FormInterface $form, array $options): void
     {
         $view->vars['api_key']          = $options['api_key'];
         $view->vars['search_enabled']   = $options['search_enabled'];
@@ -95,17 +96,17 @@ class GoogleMapType extends AbstractType
         $view->vars['include_gmaps_js'] = $options['include_gmaps_js'];
     }
 
-    public function getParent()
+    public function getParent(): ?string
     {
         return FormType::class;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return 'oh_google_maps';
     }
 
-    public function getBlockPrefix()
+    public function getBlockPrefix(): string
     {
         return 'oh_google_maps';
     }
