@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v1.7
+----
+
+ * Removing deprecations for Symfony 6.4
+
 v1.6
 ----
 
